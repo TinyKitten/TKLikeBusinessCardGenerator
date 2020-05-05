@@ -2,12 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import Konva from 'konva';
 import { Image, Layer, Rect, Stage, Text, Group } from 'react-konva';
 import { CardInfo } from '../../../models/card';
-import {
-  STAGE_WIDTH,
-  STAGE_HEIGHT,
-  MAX_LOGO_HEIGHT,
-  MAX_LOGO_WIDTH,
-} from '../../../constants/size';
+import { STAGE_WIDTH, STAGE_HEIGHT } from '../../../constants/size';
 
 type Props = {
   cardInfo: CardInfo;
@@ -91,10 +86,10 @@ const Card: React.FC<Props> = ({ cardInfo }: Props) => {
             x={STAGE_WIDTH - cardInfo.logo.width}
             y={STAGE_HEIGHT - cardInfo.logo.height}
             crop={{
-              height: MAX_LOGO_HEIGHT,
-              width: MAX_LOGO_WIDTH,
-              x: -32,
-              y: -32,
+              height: cardInfo.logo.height,
+              width: cardInfo.logo.width,
+              x: -8,
+              y: -8,
             }}
             width={cardInfo.logo.width}
             height={cardInfo.logo.height}
