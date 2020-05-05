@@ -88,8 +88,8 @@ const Card: React.FC<Props> = ({ cardInfo }: Props) => {
             crop={{
               height: cardInfo.logo.height,
               width: cardInfo.logo.width,
-              x: -8,
-              y: -8,
+              x: 0,
+              y: 0,
             }}
             width={cardInfo.logo.width}
             height={cardInfo.logo.height}
