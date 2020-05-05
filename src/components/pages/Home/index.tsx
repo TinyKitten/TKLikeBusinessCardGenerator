@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
           {MAX_LOGO_WIDTH}
           px、高さ
           {MAX_LOGO_HEIGHT}
-          px以上は切り取られます):
+          px以下推奨):
         </label>
         <input type="file" accept="image/*" onChange={onLogoFileChange} />
         <label htmlFor="role" className={styles.label}>
